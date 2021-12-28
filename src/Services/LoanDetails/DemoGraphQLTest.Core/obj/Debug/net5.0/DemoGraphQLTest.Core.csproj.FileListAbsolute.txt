@@ -1,0 +1,15 @@
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Core\bin\Debug\net5.0\DemoGraphQLTest.Core.deps.json
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Core\bin\Debug\net5.0\DemoGraphQLTest.Core.dll
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Core\bin\Debug\net5.0\ref\DemoGraphQLTest.Core.dll
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Core\bin\Debug\net5.0\DemoGraphQLTest.Core.pdb
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Core\bin\Debug\net5.0\DemoGraphQLTest.Abstraction.dll
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Core\bin\Debug\net5.0\DemoGraphQLTest.Abstraction.pdb
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Core\obj\Debug\net5.0\DemoGraphQLTest.Core.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Core\obj\Debug\net5.0\DemoGraphQLTest.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Core\obj\Debug\net5.0\DemoGraphQLTest.Core.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Core\obj\Debug\net5.0\DemoGraphQLTest.Core.AssemblyInfo.cs
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Core\obj\Debug\net5.0\DemoGraphQLTest.Core.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Core\obj\Debug\net5.0\DemoGraphQLTest.Core.csproj.CopyComplete
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Core\obj\Debug\net5.0\DemoGraphQLTest.Core.dll
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Core\obj\Debug\net5.0\ref\DemoGraphQLTest.Core.dll
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Core\obj\Debug\net5.0\DemoGraphQLTest.Core.pdb

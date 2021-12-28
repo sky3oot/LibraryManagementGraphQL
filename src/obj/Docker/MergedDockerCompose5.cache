@@ -1,0 +1,87 @@
+services:
+  booksdb:
+    container_name: booksdb
+    image: mongo
+    ports:
+    - mode: ingress
+      target: 27017
+      published: 27015
+      protocol: tcp
+    restart: always
+    volumes:
+    - type: volume
+      source: mongo_data
+      target: /data/booksdb
+      volume: {}
+  demographql.api:
+    build:
+      context: .
+      dockerfile: Services/BookDetails/DemoGraphQL.API/Dockerfile
+    depends_on:
+      booksdb:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      AppSettings:MongoServerName: mongodb://booksdb:27017
+    image: demographqlapi
+    ports:
+    - mode: ingress
+      target: 80
+      published: 5005
+      protocol: tcp
+  demographqltest.api:
+    build:
+      context: .
+      dockerfile: Services/LoanDetails/DemoGraphQLTest.API/Dockerfile
+    depends_on:
+      loansdb:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      AppSettings:MongoServerName: mongodb://loansdb:27017
+    image: demographqltestapi
+    ports:
+    - mode: ingress
+      target: 80
+      published: 5006
+      protocol: tcp
+  loansdb:
+    container_name: loansdb
+    image: mongo
+    ports:
+    - mode: ingress
+      target: 27017
+      published: 27016
+      protocol: tcp
+    restart: always
+    volumes:
+    - type: volume
+      source: mongo_data
+      target: /data/loansdb
+      volume: {}
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce
+    ports:
+    - mode: ingress
+      target: 8000
+      published: 8080
+      protocol: tcp
+    - mode: ingress
+      target: 9000
+      published: 9000
+      protocol: tcp
+    restart: always
+    volumes:
+    - type: bind
+      source: /var/run/docker.sock
+      target: /var/run/docker.sock
+      bind:
+        create_host_path: true
+    - type: volume
+      source: portainer_data
+      target: /data
+      volume: {}
+volumes:
+  mongo_data: {}
+  portainer_data: {}

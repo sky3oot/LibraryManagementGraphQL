@@ -1,0 +1,49 @@
+version: '3.4'
+
+services:
+ booksdb:
+    container_name: booksdb
+    restart: always
+    ports:
+      - "27015:27017"
+    volumes:
+      - mongo_data:/data/booksdb
+
+ loansdb:
+    container_name: loansdb
+    restart: always
+    ports:
+      - "27016:27017"
+    volumes:
+      - mongo_data:/data/loansdb
+
+ portainer:
+    container_name: portainer
+    restart: always
+    ports:
+      - "8080:8000"
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+
+
+ demographql.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "AppSettings:MongoServerName=mongodb://booksdb:27017"
+     
+    depends_on:
+       - booksdb
+    ports:
+      - "5005:80"
+
+ demographqltest.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "AppSettings:MongoServerName=mongodb://loansdb:27017"
+      
+    depends_on:
+      - loansdb
+    ports:
+      - "5006:80"

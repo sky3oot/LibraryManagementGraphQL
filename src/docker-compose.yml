@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  booksdb:
+    image: mongo
+
+  loansdb:
+    image: mongo
+
+  portainer:
+    image: portainer/portainer-ce
+
+  demographql.api:
+    image: ${DOCKER_REGISTRY-}demographqlapi
+    build:
+      context: .
+      dockerfile: Services/BookDetails/DemoGraphQL.API/Dockerfile
+
+  demographqltest.api:
+    image: ${DOCKER_REGISTRY-}demographqltestapi
+    build:
+      context: .
+      dockerfile: Services/LoanDetails/DemoGraphQLTest.API/Dockerfile
+
+volumes:
+  mongo_data:
+  portainer_data:

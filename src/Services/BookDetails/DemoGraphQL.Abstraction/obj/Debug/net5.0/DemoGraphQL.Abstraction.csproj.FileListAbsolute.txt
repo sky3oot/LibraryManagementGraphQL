@@ -1,0 +1,12 @@
+C:\Users\Dell\source\repos\DemoGraphQL\DemoGraphQL.Abstraction\bin\Debug\net5.0\DemoGraphQL.Abstraction.deps.json
+C:\Users\Dell\source\repos\DemoGraphQL\DemoGraphQL.Abstraction\bin\Debug\net5.0\DemoGraphQL.Abstraction.dll
+C:\Users\Dell\source\repos\DemoGraphQL\DemoGraphQL.Abstraction\bin\Debug\net5.0\ref\DemoGraphQL.Abstraction.dll
+C:\Users\Dell\source\repos\DemoGraphQL\DemoGraphQL.Abstraction\bin\Debug\net5.0\DemoGraphQL.Abstraction.pdb
+C:\Users\Dell\source\repos\DemoGraphQL\DemoGraphQL.Abstraction\obj\Debug\net5.0\DemoGraphQL.Abstraction.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\DemoGraphQL\DemoGraphQL.Abstraction\obj\Debug\net5.0\DemoGraphQL.Abstraction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\source\repos\DemoGraphQL\DemoGraphQL.Abstraction\obj\Debug\net5.0\DemoGraphQL.Abstraction.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\DemoGraphQL\DemoGraphQL.Abstraction\obj\Debug\net5.0\DemoGraphQL.Abstraction.AssemblyInfo.cs
+C:\Users\Dell\source\repos\DemoGraphQL\DemoGraphQL.Abstraction\obj\Debug\net5.0\DemoGraphQL.Abstraction.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\DemoGraphQL\DemoGraphQL.Abstraction\obj\Debug\net5.0\DemoGraphQL.Abstraction.dll
+C:\Users\Dell\source\repos\DemoGraphQL\DemoGraphQL.Abstraction\obj\Debug\net5.0\ref\DemoGraphQL.Abstraction.dll
+C:\Users\Dell\source\repos\DemoGraphQL\DemoGraphQL.Abstraction\obj\Debug\net5.0\DemoGraphQL.Abstraction.pdb

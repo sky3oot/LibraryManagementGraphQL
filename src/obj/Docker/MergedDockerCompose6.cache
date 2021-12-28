@@ -1,0 +1,207 @@
+services:
+  booksdb:
+    container_name: booksdb
+    image: mongo
+    ports:
+    - mode: ingress
+      target: 27017
+      published: 27015
+      protocol: tcp
+    restart: always
+    volumes:
+    - type: volume
+      source: mongo_data
+      target: /data/booksdb
+      volume: {}
+  demographql.api:
+    build:
+      context: .
+      dockerfile: Services/BookDetails/DemoGraphQL.API/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: DemoGraphQL.API
+      target: base
+    container_name: DemoGraphQL.API
+    depends_on:
+      booksdb:
+        condition: service_started
+    entrypoint:
+    - tail
+    - -f
+    - /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      AppSettings:MongoServerName: mongodb://booksdb:27017
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: demographqlapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/net5.0/DemoGraphQL.API.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - mode: ingress
+      target: 80
+      published: 5005
+      protocol: tcp
+    tty: true
+    volumes:
+    - type: bind
+      source: C:\Users\Dell\source\repos\LibraryManagementGraphQL\src\Services\BookDetails\DemoGraphQL.API
+      target: /app
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Dell\source\repos\LibraryManagementGraphQL\src\.
+      target: /src
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Dell\vsdbg\vs2017u5
+      target: /remote_debugger
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Dell\.nuget\packages\
+      target: /root/.nuget/packages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages
+      target: /root/.nuget/fallbackpackages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Dell\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Dell\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+  demographqltest.api:
+    build:
+      context: .
+      dockerfile: Services/LoanDetails/DemoGraphQLTest.API/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: DemoGraphQLTest.API
+      target: base
+    container_name: DemoGraphQLTest.API
+    depends_on:
+      loansdb:
+        condition: service_started
+    entrypoint:
+    - tail
+    - -f
+    - /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      AppSettings:MongoServerName: mongodb://loansdb:27017
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: demographqltestapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/net5.0/DemoGraphQLTest.API.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - mode: ingress
+      target: 80
+      published: 5006
+      protocol: tcp
+    tty: true
+    volumes:
+    - type: bind
+      source: C:\Users\Dell\source\repos\LibraryManagementGraphQL\src\Services\LoanDetails\DemoGraphQLTest.API
+      target: /app
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Dell\source\repos\LibraryManagementGraphQL\src\.
+      target: /src
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Dell\vsdbg\vs2017u5
+      target: /remote_debugger
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Dell\.nuget\packages\
+      target: /root/.nuget/packages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages
+      target: /root/.nuget/fallbackpackages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Dell\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Dell\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+  loansdb:
+    container_name: loansdb
+    image: mongo
+    ports:
+    - mode: ingress
+      target: 27017
+      published: 27016
+      protocol: tcp
+    restart: always
+    volumes:
+    - type: volume
+      source: mongo_data
+      target: /data/loansdb
+      volume: {}
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce
+    ports:
+    - mode: ingress
+      target: 8000
+      published: 8080
+      protocol: tcp
+    - mode: ingress
+      target: 9000
+      published: 9000
+      protocol: tcp
+    restart: always
+    volumes:
+    - type: bind
+      source: /var/run/docker.sock
+      target: /var/run/docker.sock
+      bind:
+        create_host_path: true
+    - type: volume
+      source: portainer_data
+      target: /data
+      volume: {}
+volumes:
+  mongo_data: {}
+  portainer_data: {}

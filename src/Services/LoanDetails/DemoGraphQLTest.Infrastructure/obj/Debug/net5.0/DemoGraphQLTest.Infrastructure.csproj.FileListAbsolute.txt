@@ -1,0 +1,15 @@
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Infrastructure\bin\Debug\net5.0\DemoGraphQLTest.Infrastructure.deps.json
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Infrastructure\bin\Debug\net5.0\DemoGraphQLTest.Infrastructure.dll
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Infrastructure\bin\Debug\net5.0\ref\DemoGraphQLTest.Infrastructure.dll
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Infrastructure\bin\Debug\net5.0\DemoGraphQLTest.Infrastructure.pdb
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Infrastructure\bin\Debug\net5.0\DemoGraphQLTest.Abstraction.dll
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Infrastructure\bin\Debug\net5.0\DemoGraphQLTest.Abstraction.pdb
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Infrastructure\obj\Debug\net5.0\DemoGraphQLTest.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Infrastructure\obj\Debug\net5.0\DemoGraphQLTest.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Infrastructure\obj\Debug\net5.0\DemoGraphQLTest.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Infrastructure\obj\Debug\net5.0\DemoGraphQLTest.Infrastructure.AssemblyInfo.cs
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Infrastructure\obj\Debug\net5.0\DemoGraphQLTest.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Infrastructure\obj\Debug\net5.0\DemoGraphQLTest.Infrastructure.csproj.CopyComplete
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Infrastructure\obj\Debug\net5.0\DemoGraphQLTest.Infrastructure.dll
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Infrastructure\obj\Debug\net5.0\ref\DemoGraphQLTest.Infrastructure.dll
+C:\Users\Dell\source\repos\DemoGraphQLTest\DemoGraphQLTest.Infrastructure\obj\Debug\net5.0\DemoGraphQLTest.Infrastructure.pdb
